@@ -5,12 +5,15 @@ RUN apt-get update
 RUN apt-get install -y \
     python-dev \
     python-pip 
+    bmysqlclient-dev
 
 # To install usefull tools.
 RUN apt-get install -y vim \
-    curl
+    curl \
+    mysql-client
 
 
 # To install pip library
 RUN pip install --upgrade pip
-RUN pip install Django==1.11.5
+RUN pip install Django==1.11.5 \
+    MySQL-python==1.2.5
