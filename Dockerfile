@@ -4,8 +4,8 @@ FROM ubuntu:16.04
 RUN apt-get update
 RUN apt-get install -y \
     python-dev \
-    python-pip 
-    bmysqlclient-dev
+    python-pip \
+    libmysqlclient-dev
 
 # To install usefull tools.
 RUN apt-get install -y vim \
